@@ -1,0 +1,56 @@
+div.slide {
+    width: 100vw;
+    height: 100vh;
+}
+
+div.slide-content {
+    width: 70vw;
+    height: 80vh;
+    margin-top: 10vh;
+    margin-left: 15vw;
+    padding: 2% 5%;
+}
+
+div.inactiveslide {
+    opacity: 0.4;
+}
+
+div.activeslide {
+    opacity: 1;
+}
+
+pre {
+    font-family: monospace;
+    font-size: 16pt;
+    height: 600px;
+    letter-spacing: -1px;
+    line-height: 20pt;
+    overflow: auto;
+}
+
+pre:focus {
+    outline: 0;
+}
+
+iframe {
+    width: 90%;
+    height: 90%;
+    border:none;
+}
+
+strong {
+    text-shadow: 1px 0 0 #606060;
+}
+
+div.slide:first-of-type > .slide-content {
+    padding: 10%;
+}
+
+div#logo {
+    overflow: hidden;
+}
+
+div.footer {
+    text-align: right;
+    margin-top: 2rem;
+}

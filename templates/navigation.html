@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<!-- Mirrored from markdalgleish.com/presentations/jquerymobile/jqm/formelements.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Jun 2016 10:44:43 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <title>Navigation</title>
+    <link rel="stylesheet" href="../static/css/lib/jquery-ui.css">
+    <link rel="stylesheet" href="../static/materialize/css/materialize.css">
+    <link rel="stylesheet" href="../static//css/navigation.css">
+    <script src="../static/js/lib/jquery-2.2.4.min.js"></script>
+    <script src="../static/js/lib/jquery-ui.min.js"></script>
+    <script src="../static/materialize/js/materialize.min.js"></script>
+    <script src="../static/js/lib/search-it.min.js"></script>
+</head>
+
+<body>
+    <ul id="sortable-1" class="collapsible collapsible-example" data-collapsible="expandable">
+        <li>
+            <div class="collapsible-header active">Ispiti</div>
+            <div class="collapsible-body">
+                <ul>
+                    <li><a href="#">Prijavi</a></li>
+                    <li class="active"><a href="#">Odjavi </a></li>
+                    <li><a href="#">Popis rokova</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">Poruke i obavjesti</div>
+            <div class="collapsible-body">
+                <ul>
+                    <li><a href="#">E-mail</a></li>
+                    <li><a href="#">Poruke</a></li>
+                    <li><a href="#">Yammer</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">Predmeti</div>
+            <div class="collapsible-body">
+                <ul>
+                    <li><a href="#">Moji predmeti</a></li>
+                    <li><a href="#">Moja prisustva</a></li>
+                    <li><a href="#">Završni rad</a></li>
+                    <li><a href="#">Tjedni raspored</a></li>
+                    <li><a href="#">Diplomski rad</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">Studentska služba</div>
+            <div class="collapsible-body">
+                <ul>
+                    <li><a href="#">Slanje upita</a></li>
+                    <li><a href="#">Upisni list</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">Obrsci i potvrde</div>
+            <div class="collapsible-body">
+                <ul>
+                    <li><a href="#">Obrasci i dokumenti</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">E-sadržaj</div>
+            <div class="collapsible-body">
+                <ul>
+                    <li><a href="#">Ispitni sustav</a></li>
+                    <li><a href="#">Ankete</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">Ocjene</div>
+            <div class="collapsible-body">
+                <ul>
+                    <li><a href="#">Moje ocjene</a></li>
+                    <li><a href="#">Moji bodovi</a></li>
+                    <li><a href="#">Moji certifikati</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">Plaćanje</div>
+            <div class="collapsible-body">
+                <ul>
+                    <li><a href="#">Moje financije</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var headers = $('div.collapsible-header');
+        $('.collapsible-body a').click(function(event) {
+            event.preventDefault();
+            $('.collapsible-body .active').removeClass('active');
+            $(this).parent().addClass('active');
+        });
+
+        $('.collapsible').collapsible({
+            accordion: false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+        });
+        $('#sortable-1').searchIt({
+            useMaterializeCollapsible: true,
+            headerIdentifier: '.collapsible-header',
+            itemSelector: '.collapsible-body a',
+            inputLabelValue: 'Pretraži:',
+        });
+
+        $('input').keydown(function() {
+
+        });
+
+        $('#sortable-1').sortable({
+            placeholder: "ui-state-highlight",
+            stop: function(event, ui) {
+                ui.item.find('.collapsible-header').trigger('click');
+            }
+        });
+    });
+    </script>
+</body>
+
+</html>

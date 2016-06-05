@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Tim Venti Due</title>
+    <link rel="stylesheet" href="static/materialize/css/materialize.css">
+    <link rel="stylesheet" href="static/css/presentation.css">
+    <script src="static/js/lib/jquery-2.2.4.min.js"></script>
+    <script src="static/materialize/js/materialize.min.js"></script>
+    <script src="static/js/lib/fathom.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        var fathom = $('#presentation').fathom({
+            onActivateSlide: function() {
+                var $slide = $(this);
+                $slide.find('pre:first').focus();
+            }
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <div id="presentation">
+        <!-- 1. Slide-->
+        <div class="slide">
+            <div class="slide-content z-depth-2">
+                <h2>Redizajna korisničkog sučelja digitalne referade Infoeduka</h2>
+                <div id="logo">
+                    <img src="static/images/vizualni-identitet.jpg" alt="Algebra" height="100%" width="auto">
+                </div>
+                <div class="footer">
+                    <h5> Tim VentiDue </h5>
+                </div>
+            </div>
+        </div>
+        <!-- 2. Slide-->
+        <div class="slide">
+            <div class="slide-content z-depth-2">
+                <h3>Navigacija</h3>
+                        <iframe src="templates/navigation.html"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
