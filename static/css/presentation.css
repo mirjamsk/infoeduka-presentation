@@ -64,8 +64,10 @@ div.slide-title {
     width: 100%;
 }
 
-div.slide-sub-title::before {
-    content: '- ';
+div.slide-title span {
+    background-color: #fff;
+    padding-left: 15px;
+    padding-right: 50px;
 }
 
 div.slide-sub-title {
@@ -87,4 +89,14 @@ div.slide-body img {
 div.footer {
     text-align: right;
     margin-top: 2rem;
+}
+
+#presentation > div.slide:not(:first-of-type) :before {
+    z-index: -1;
+    border-top: 1px solid #dedede;
+    content: "";
+    position: absolute;
+    top: 7vh;
+    left: 0;
+    width: 100%;
 }
