@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Odjava ispita</title>
+    <link rel="stylesheet" href="../static/materialize/css/materialize.css">
+    <link rel="stylesheet" href="../static/css/sumirani-bodovi.css">
+    <script src="../static/js/lib/jquery-2.2.4.min.js"></script>
+    <script src="../static/materialize/js/materialize.min.js"></script>
+</head>
+
+<body>
+    <!-- Dropdown Trigger -->
+
+    <div id="dropdown-filter-container">
+        <a class='dropdown-button btn-flat' href='#' data-activates='dropdown-filter'>FILTRIRAJ <i class="material-icons">filter_list</i></a>
+        <!-- Dropdown Structure -->
+        <ul id='dropdown-filter' class='dropdown-content'>
+            <li class="kolegij">
+                <input type="checkbox" id="kolegij" checked="checked" />
+                <label for="kolegij">Kolegij</label>
+            </li>
+            <li class="ishod">
+                <input type="checkbox" id="ishod" checked="checked" />
+                <label for="ishod">Ishodi</label>
+            </li>
+            <li class="ukupno-bodova">
+                <input type="checkbox" id="ukupno-bodova" checked="checked" />
+                <label for="ukupno-bodova">Ukupno bodova</label>
+            </li>
+            <li class="ocjena">
+                <input type="checkbox" id="ocjena" checked="checked" />
+                <label for="ocjena">Ocjena</label>
+            </li>
+            <li class="potpis">
+                <input type="checkbox" id="potpis" checked="checked" />
+                <label for="potpis">Potpis</label>
+            </li>
+            <li class="ects">
+                <input type="checkbox" id="ects" checked="checked" />
+                <label for="ects">ECTS</label>
+            </li>
+            <li class="dolaznost">
+                <input type="checkbox" id="dolaznost" checked="checked" />
+                <label for="dolaznost">Dolaznost</label>
+            </li>
+            <li class="ispricnice">
+                <input type="checkbox" id="ispricnice" checked="checked" />
+                <label for="ispricnice">Ispričnice</label>
+            </li>
+            <li class="ukupno-dol-ispr">
+                <input type="checkbox" id="ukupno-dol-ispr" checked="checked" />
+                <label for="ukupno-dol-ispr">Ukupno</label>
+            </li>
+            <li class="dopunska-on-line">
+                <input type="checkbox" id="dopunska-on-line" checked="checked" />
+                <label for="dopunska-on-line">Dopunska/on-line</label>
+            </li>
+            <li class="broj-prijava-ispita">
+                <input type="checkbox" id="broj-prijava-ispita" checked="checked" />
+                <label for="broj-prijava-ispita">Broj prijava ispita</label>
+            </li>
+        </ul>
+    </div>
+    <table class="bordered centered">
+        <thead>
+            <tr>
+                <th class="kolegij">KOLEGIJ</th>
+                <th class="ishod">I1</th>
+                <th class="ishod">I2</th>
+                <th class="ishod">I3</th>
+                <th class="ishod">I4</th>
+                <th class="ishod">I5</th>
+                <th class="ishod">I6</th>
+                <th class="ishod">I7</th>
+                <th class="ishod">I8</th>
+                <th class="ishod">I9</th>
+                <th class="ukupno-bodova">UKUPNO BODOVA</th>
+                <th class="ocjena">OCJENA</th>
+                <th class="potpis">POTPIS</th>
+                <th class="ects">ECTS</th>
+                <th class="dolaznost">DOLAZNOST</th>
+                <th class="ispricnice">ISPRIČNICE</th>
+                <th class="ukupno-dol-ispr">UKUPNO</th>
+                <th class="dopunska-on-line">DOPUNSKA/ ON-LINE</th>
+                <th class="broj-prijava-ispita">BROJ PRIJAVA ISPITA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="predmet-1">
+                <td class="kolegij">Engleski jezik</td>
+                <td class="ishod"></td>
+                <td class="ishod"></td>
+                <td class="ishod"></td>
+                <td class="ishod"></td>
+                <td class="ishod"></td>
+                <td class="ishod"></td>
+                <td class="ishod"></td>
+                <td class="ishod"></td>
+                <td class="ishod"></td>
+                <td class="ukupno-bodova"></td>
+                <td class="ocjena">Vrlo dobar(4)</td>
+                <td class="potpis">PRIZNAT</td>
+                <td class="ects">6</td>
+                <td class="dolaznost">0%</td>
+                <td class="ispricnice">0%</td>
+                <td class="ukupno-dol-ispr">0%</td>
+                <td class="dopunska-on-line"></td>
+                <td class="broj-prijava-ispita">0</td>
+            </tr>
+            <tr id="predmet-2">
+                <td class="kolegij">Psihologija u marketinškim komunikcijama</td>
+                <td class="ishod">13/17</td>
+                <td class="ishod">15/19</td>
+                <td class="ishod">14/19</td>
+                <td class="ishod">16/18</td>
+                <td class="ishod"></td>
+                <td class="ishod"></td>
+                <td class="ishod"></td>
+                <td class="ishod"></td>
+                <td class="ishod"></td>
+                <td class="ukupno-bodova">58</td>
+                <td class="ocjena">Dobar(3)</td>
+                <td class="potpis">20.01.2016</td>
+                <td class="ects">7</td>
+                <td class="dolaznost">95.2%</td>
+                <td class="ispricnice">0%</td>
+                <td class="ukupno-dol-ispr">95.2%</td>
+                <td class="dopunska-on-line"></td>
+                <td class="broj-prijava-ispita">1</td>
+            </tr>
+            <tr id="predmet-3">
+                <td class="kolegij">Uvod u marketing i medijske komunikacije</td>
+                <td class="ishod">17/18</td>
+                <td class="ishod">16/18</td>
+                <td class="ishod">14/16</td>
+                <td class="ishod">16/16</td>
+                <td class="ishod">24/24</td>
+                <td class="ishod">5/5</td>
+                <td class="ishod"></td>
+                <td class="ishod"></td>
+                <td class="ishod"></td>
+                <td class="ukupno-bodova">92</td>
+                <td class="ocjena">Odličan(5)</td>
+                <td class="potpis">27.01.2016</td>
+                <td class="ects">7</td>
+                <td class="dolaznost">95.2%</td>
+                <td class="ispricnice">0%</td>
+                <td class="ukupno-dol-ispr">95.2%</td>
+                <td class="dopunska-on-line"></td>
+                <td class="broj-prijava-ispita">1</td>
+            </tr>
+        </tbody>
+    </table>
+    <script type="text/javascript">
+    $(document).ready(function() {
+            $('#dropdown-filter').on('click', 'input',function(e){
+                var $ele = $(this);
+                $('table tr').find('.'+$ele.attr('id')).fadeToggle();
+
+                console.log($ele);
+                console.log($ele.attr('id'))
+            });
+    });
+    </script>
+</body>
+
+</html>

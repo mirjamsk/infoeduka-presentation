@@ -1,3 +1,7 @@
+* {
+    font-family: "Lato", "Roboto", "san-serif";
+}
+
 .modal-wrapper {
     height: 400px;
 }
@@ -45,9 +49,14 @@
 }
 
 thead{
-    background-color: #E2E3E4 !important;
+    background-color: #ededed !important;
 }
 thead th{
     font-weight:400 !important;
     padding: 5px 5px;
+}
+
+th:first-of-type,
+tr>td:first-of-type{
+    text-align: left !important;
 }
