@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Odjava ispita</title>
+        <link rel="stylesheet" href="../static/materialize/css/materialize.css">
+        <link rel="stylesheet" href="../static/css/odjava-ispita.css">
+        <script src="../static/js/lib/jquery-2.2.4.min.js"></script>
+        <script src="../static/materialize/js/materialize.min.js"></script>
+    </head>
+</head>
+
+<body>
+        <table>
+            <thead>
+                <tr>
+                    <th>KOLEGIJ</th>
+                    <th>ID</th>
+                    <th>GODINA KOLEGIJA</th>
+                    <th>BROJ PRIJAVA</th>
+                    <th>DATUM ODRŽAVANJA ISPITA</th>
+                    <th>VRIJEME ODRŽAVANJA ISPITA</th>
+                    <th>TRAJANJE ISPITA</th>
+                    <th>UČIONA ODRŽAVANJA ISPITA</th>
+                    <th>ODJAVA ISPITA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="predmet-1">
+                    <td>Dizajn vizualnih komunikacija</td>
+                    <td>08331</td>
+                    <td>1. godina</td>
+                    <td>0</td>
+                    <td>27.06.2016</td>
+                    <td>12:00</td>
+                    <td>2 h</td>
+                    <td>Učionica 01</td>
+                    <td><a class="primary-btn btn modal-trigger" href="#modal-1">Odjavi</a></td>
+                </tr>
+                <tr id="predmet-2">
+                    <td>Ponašanje potrošača</td>
+                    <td>08305</td>
+                    <td>1. godina</td>
+                    <td>0</td>
+                    <td>29.06.2016</td>
+                    <td>13:00</td>
+                    <td>1 h</td>
+                    <td>Učionica 04</td>
+                    <td><a class="primary-btn btn modal-trigger" href="#modal-2">Odjavi</a></td>
+                </tr>
+                <tr id="predmet-3">
+                    <td>Metodologija vođenja projekata</td>
+                    <td>08307</td>
+                    <td>1. godina</td>
+                    <td>0</td>
+                    <td>01.07.2016</td>
+                    <td>17:00</td>
+                    <td>2 h</td>
+                    <td>Dvorana Steve Jobs</td>
+                    <td><a class="primary-btn btn modal-trigger" href="#modal-3">Odjavi</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Modal Structure -->
+        <div id="modal-0" class="modal">
+            <div class="modal-content">
+                <h4>Odjava Ispita</h4>
+                <p>Jeste li sigurni da želite odjaviti ispit:</p>
+                <div class="exam-info">
+                    <span class="exam-name"></span>
+                    <br>
+                    <span class="exam-date "></span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="basic-btn modal-action modal-close btn-flat">Odustani</a>
+                <a href="#!" class="basic-btn modal-action modal-close btn-flat odjavi">Prihvati</a>
+            </div>
+        </div>
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+        $('tbody tr').each(function() {
+            var row = $(this);
+            var examName = row.find('td:nth-of-type(2)').text();
+            examName += ' ' + row.find('td:nth-of-type(1)').text();
+
+            var examDate = row.find('td:nth-of-type(5)').text();
+            examDate += ' u ' + row.find('td:nth-of-type(6)').text();
+
+            var modal = $('#modal-0').clone();
+            modal.find('.exam-name').text(examName);
+            modal.find('.exam-date').text(examDate);
+            modal.attr('id', row.find('td:last a').attr('href').replace('#', ''));
+            $('body').append(modal);
+            modal.find('.odjavi').one('click', function() {
+                $('#predmet-' + modal.attr('id').replace('modal-', '')).remove();
+            });
+
+        });
+
+        $('.modal-trigger').leanModal();
+    });
+    </script>
+</body>
+
+</html>
