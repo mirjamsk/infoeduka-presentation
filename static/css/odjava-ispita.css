@@ -49,4 +49,5 @@ thead{
 }
 thead th{
     font-weight:400 !important;
+    padding: 5px 5px;
 }
