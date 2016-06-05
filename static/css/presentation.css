@@ -100,3 +100,7 @@ div.footer {
     left: 0;
     width: 100%;
 }
+i.static{
+    vertical-align: text-bottom;
+    font-size: 32px;
+}
