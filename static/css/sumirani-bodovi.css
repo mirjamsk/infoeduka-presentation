@@ -49,3 +49,6 @@ i.material-icons {
 .dropdown-content {
     opacity: 1;
 }
+.dropdown-content li:hover{
+	background-color: transparent !important;
+}
