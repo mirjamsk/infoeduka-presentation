@@ -1,14 +1,16 @@
 * {
     font-family: "Lato", "Roboto", "san-serif";
 }
+
 html,
-body{
-	width: 100%;
-	height: 100%;
+body {
+    width: 100%;
+    height: 100%;
 }
 
 table {
     overflow: scroll;
+    margin-top:50px;
 }
 
 thead {
@@ -36,19 +38,31 @@ i.material-icons {
 
 #dropdown-filter {
     right: 10px;
+    position: fixed;
 }
 
 #dropdown-filter > li {
     padding: 10%;
 }
-#dropdown-filter > div{
-	margin: 30px;
-	margin-bottom: 0;
+
+#dropdown-filter > div {
+    margin: 30px;
+    margin-bottom: 0;
 }
 
 .dropdown-content {
     opacity: 1;
 }
-.dropdown-content li:hover{
-	background-color: transparent !important;
+
+.dropdown-content li:hover {
+    background-color: transparent !important;
+}
+
+.sticky {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    border-bottom: 1px solid #dedede;
 }
