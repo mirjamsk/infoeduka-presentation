@@ -91,7 +91,7 @@ div.footer {
     margin-top: 2rem;
 }
 
-#presentation > div.slide:not(:first-of-type) :before {
+#presentation > div.slide:not(:first-of-type):not(:last-of-type) :before {
     z-index: -1;
     border-top: 1px solid #dedede;
     content: "";
@@ -100,7 +100,18 @@ div.footer {
     left: 0;
     width: 100%;
 }
+div.slide:last-of-type  {
+    position: relative;
+}
+.content-last{
+    height: 85%;
+    padding-top: 15%;
+}
 i.static{
     vertical-align: text-bottom;
     font-size: 32px;
+}
+ i.last {
+    padding-top: 50px;
+    
 }
