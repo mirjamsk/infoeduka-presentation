@@ -7,14 +7,12 @@
     <link rel="stylesheet" href="../static/materialize/css/materialize.css">
     <link rel="stylesheet" href="../static/css/sumirani-bodovi.css">
     <script src="../static/js/lib/jquery-2.2.4.min.js"></script>
-    <script src="../static/materialize/js/materialize.min.js"></script>
 </head>
 
 <body>
     <!-- Dropdown Trigger -->
-
     <div id="dropdown-filter-container">
-        <a class='dropdown-button btn-flat' href='#' data-activates='dropdown-filter'>FILTRIRAJ <i class="material-icons">filter_list</i></a>
+        <a class='dropdown-button btn-flat'>FILTRIRAJ <i class="material-icons">filter_list</i></a>
         <!-- Dropdown Structure -->
         <ul id='dropdown-filter' class='dropdown-content'>
             <li class="kolegij">
@@ -155,13 +153,15 @@
     </table>
     <script type="text/javascript">
     $(document).ready(function() {
-            $('#dropdown-filter').on('click', 'input',function(e){
-                var $ele = $(this);
-                $('table tr').find('.'+$ele.attr('id')).fadeToggle();
-
-                console.log($ele);
-                console.log($ele.attr('id'))
-            });
+        $('#dropdown-filter-container a').on('click', function(e) {
+            $('#dropdown-filter').slideToggle();
+        });
+        $('#dropdown-filter').on('click', 'li', function(e) {
+            e.preventDefault();
+            var $ele = $(this).find('input');
+            $ele.prop('checked', !$ele.is(':checked'));
+            $('table tr').find('.' + $ele.attr('id')).fadeToggle();
+        });
     });
     </script>
 </body>

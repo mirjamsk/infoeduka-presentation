@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Tim Venti Due</title>
     <link rel="stylesheet" href="static/materialize/css/materialize.css">
-    <link rel="stylesheet" href="latofonts.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/latofonts.css" rel="stylesheet">
     <link rel="stylesheet" href="static/css/presentation.css">
     <script src="static/js/lib/jquery-2.2.4.min.js"></script>
     <script src="static/materialize/js/materialize.min.js"></script>
@@ -13,10 +13,7 @@
     <script>
     $(document).ready(function() {
         var fathom = $('#presentation').fathom({
-            onActivateSlide: function() {
-                var $slide = $(this);
-                $slide.find('pre:first').focus();
-            }
+  dislayMode: 'single'
         });
     });
     </script>
@@ -147,6 +144,16 @@
                 </div>
                 <div class="slide-body">
                     <img src="static/images/sumirani-prikaz.jpg" alt="Sumirani prikaz bodova" height="100%" width="auto">
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slide-content z-depth-1">
+                <div class="slide-title"><span><i class="material-icons">touch_app</i> Moji bodovi</span>
+                    <div class="slide-sub-title"> - Sumirani prikaz</div>
+                </div>
+                <div class="slide-body">
+                    <iframe src="templates/sumirani-bodovi.html"></iframe>
                 </div>
             </div>
         </div>

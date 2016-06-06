@@ -1,27 +1,47 @@
 * {
     font-family: "Lato", "Roboto", "san-serif";
 }
-table{
-	overflow: scroll;
+html,
+body{
+	width: 100%;
+	height: 100%;
 }
-thead{
+
+table {
+    overflow: scroll;
+}
+
+thead {
     background-color: #ededed !important;
 }
-thead th{
-    font-weight:400 !important;
+
+thead th {
+    font-weight: 400 !important;
     padding: 5px 5px;
     min-width: 70px;
 }
+
 th.kolegij,
-td.kolegij{
-	text-align: left !important;
+td.kolegij {
+    text-align: left !important;
 }
-i.material-icons{
-	vertical-align: bottom;
+
+i.material-icons {
+    vertical-align: bottom;
 }
+
 #dropdown-filter-container {
-	text-align: right;
+    text-align: right;
 }
-#dropdown-filter > li{
-	padding: 10%;
+
+#dropdown-filter {
+    right: 10px;
+}
+
+#dropdown-filter > li {
+    padding: 10%;
+}
+
+.dropdown-content {
+    opacity: 1;
 }
