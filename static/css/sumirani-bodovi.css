@@ -41,6 +41,10 @@ i.material-icons {
 #dropdown-filter > li {
     padding: 10%;
 }
+#dropdown-filter > div{
+	margin: 30px;
+	margin-bottom: 0;
+}
 
 .dropdown-content {
     opacity: 1;
